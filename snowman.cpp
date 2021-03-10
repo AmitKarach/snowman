@@ -4,7 +4,7 @@
 // X(TTT)Y
 //  (BBB)
 
-#include<stdlib.h>
+// #include<stdlib.h>
 #include<iostream>
 // #include "surce.hpp"
 #include <array>
@@ -13,38 +13,85 @@
 using namespace std;
 namespace clothing
 {
-    const std::array<string,4> hats = {"      \n _===_","  ___ \n .....","   _  \n  /_\\ ","  ___ \n (_*_)",};
-    const std::array<string,4> noses = {",",".","_"," ",};
-    const std::array<string,4> eyes = {".","o","O","-",};
-    const std::array<string,4> leftArmsUp  = {" ","\\"," "," ",};
-    const std::array<string,4> leftArmsDown  = {"<"," ","/"," ",};
-    const std::array<string,4> rightArmsUp  = {" ","/"," "," ",};
-    const std::array<string,4> rightArmsDown  = {">"," ","\\"," ",};
-    const std::array<string,4> Belly={"( : )","(] [)","(> <)","(   )",};
-    const std::array<string,4> Base={" ( : ) "," (\" \") "," (___) "," (   ) ",
+    const array<string,4> hats = {
+    "      \n _===_",
+    "  ___ \n .....",
+    "   _  \n  /_\\ ",
+    "  ___ \n (_*_)",
 };
+    const array<string,4> noses = {
+    ",",
+    ".",
+    "_",
+    " ",
+};
+    const array<string,4> eyes = {
+    ".",
+    "o",
+    "O",
+    "-",
+};
+    const array<string,4> leftArmsUp  = {
+    " ",
+    "\\",
+    " ",
+    " ",
+};
+    const array<string,4> leftArmsDown  = {
+    "<",
+    " ",
+    "/",
+    " ",
+};
+    const array<string,4> rightArmsUp  = {
+    " ",
+    "/",
+    " ",
+    " ",
+};
+    const array<string,4> rightArmsDown  = {
+    ">",
+    " ",
+    "\\",
+    " ",
+};
+    const array<string,4> belly={
+    "( : )",
+    "(] [)",
+    "(> <)",
+    "(   )",
+};
+    const array<string,4> base={
+    " ( : ) ",
+    " (\" \") ",
+    " (___) ",
+    " (   ) ",
+};
+}
 
 namespace ariel
 {
     const int size=8;
     const int divider=10;
 
-    void breakNum( int* arr,int num)
+    array<int,size> breakNum(int num)
     {
-        const int low=1;
-        const int high=4;
+        array<int,size> arr ={};
+        const int lowD=1;
+        const int highD=4;
         int current=0;
         for (int i = 0; i < size; i++)
         {
             current = num%divider;
-            if(current<low || current>high)
+            if(current<lowD || current>highD)
             {
                 throw std::out_of_range{"not a legal digit!"};
             } 
             num= num/divider;
             current--;
-            arr[size-1-i] = current;
+            arr.at(size-1-i) = current;
         }
+        return arr;
         
     }
     string snowman(int num)
@@ -64,40 +111,39 @@ namespace ariel
             throw std::out_of_range{"not enough numbers"};
         } 
 
-        std::array<int,size> arr ={0};
-        breakNum(arr,num);
+        array<int,size> arr = breakNum(num);
 
-        string answer="";
+        string answer;
         //now we will build a snow man by dividing it to four parts:
 
         //part 1 the hat 
         //  HHHHH
         //  HHHHH
-        answer.append(clothing::hats[arr[H]]);
+        answer.append(clothing::hats.at(arr.at(H)));
         answer.append("\n");
 
         //part 2 the head
         // X(LNR)Y
-        answer.append(clothing::leftArmsUp[arr[X]]);
+        answer.append(clothing::leftArmsUp.at(arr.at(X)));
         answer.append("(");
-        answer.append(clothing::eyes[arr[L]]);
-        answer.append(clothing::noses[arr[N]]);
-        answer.append(clothing::eyes[arr[R]]);
+        answer.append(clothing::eyes.at(arr.at(L)));
+        answer.append(clothing::noses.at(arr.at(N)));
+        answer.append(clothing::eyes.at(arr.at(R)));
         answer.append(")");
-        answer.append(clothing::rightArmsUp[arr[Y]]);
+        answer.append(clothing::rightArmsUp.at(arr.at(Y)));
         answer.append("\n");
         
         //part 3 the belly:
         // X(TTT)Y
         
-        answer.append(clothing::leftArmsDown[arr[X]]);
-        answer.append(clothing::belly[arr[T]]);
-        answer.append(clothing::rightArmsDown[arr[Y]]);
+        answer.append(clothing::leftArmsDown.at(arr.at(X)));
+        answer.append(clothing::belly.at(arr.at(T)));
+        answer.append(clothing::rightArmsDown.at(arr.at(Y)));
         answer.append("\n");
 
         //part 4 bass:
         //  (BBB)
-        answer.append(clothing::Base[arr[B]]);
+        answer.append(clothing::base.at(arr.at(B)));
 
 
         return answer;
