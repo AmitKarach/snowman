@@ -79,25 +79,6 @@ TEST_CASE("Good snowman code") {
     // CHECK(nospaces(snowman(22222222)) == nospaces(" ___\n .....\n\\(o.o)/\n (] [) \n (  \"  \")"));
 
 
-
-
-    // CHECK(nospaces(snowman(11114411)) == nospaces("===\n(.,.)\n( : )\n( : )"));
-    // CHECK(nospaces(snowman(41114411)) == nospaces("  _  \n (*)\n(.,.)\n( : )\n( : )"));
-    // CHECK(nospaces(snowman(11114441)) == nospaces("===\n(.,.)\n(   )\n( : )"));
-    // CHECK(nospaces(snowman(11114431)) == nospaces("===\n(.,.)\n(> <)\n( : )"));
-    // CHECK(nospaces(snowman(11114421)) == nospaces("===\n(.,.)\n(] [)\n( : )"));
-    // CHECK(nospaces(snowman(11234411)) == nospaces("===\n(o,O)\n( : )\n( : )"));
-    // CHECK(nospaces(snowman(11324411)) == nospaces("===\n(O,o)\n( : )\n( : )"));
-    // CHECK(nospaces(snowman(11444411)) == nospaces("===\n(-,-)\n( : )\n( : )"));
-    // CHECK(nospaces(snowman(11244411)) == nospaces("===\n(o,-)\n( : )\n( : )"));
-    // CHECK(nospaces(snowman(11134411)) == nospaces("===\n(.,O)\n( : )\n( : )"));
-    // CHECK(nospaces(snowman(33221111)) == nospaces("   _  \n  /_\\\n(o_o)\n<( : )>\n( : )"));
-    // CHECK(nospaces(snowman(11221111)) == nospaces("===\n(o,o)\n<( : )>\n( : )"));
-    // CHECK(nospaces(snowman(11221111)) == nospaces("===\n(o,o)\n<( : )>\n( : )"));
-    // CHECK(nospaces(snowman(11221111)) == nospaces("===\n(o,o)\n<( : )>\n( : )"));
-    // CHECK(nospaces(snowman(11221111)) == nospaces("===\n(o,o)\n<( : )>\n( : )"));
-    // CHECK(nospaces(snowman(11221111)) == nospaces("===\n(o,o)\n<( : )>\n( : )"));
-
 }
 
 TEST_CASE("not a legal entary") {
@@ -131,60 +112,3 @@ TEST_CASE("a negative number entery") {
     CHECK_THROWS(snowman(-43254115));
     
 }
-// TEST_CASE("Bad snowman code") {
-
-//     // CHECK_THROWS(snowman(11111115));
-//     // CHECK_THROWS(snowman(11111151));
-//     // CHECK_THROWS(snowman(11111511));
-//     // CHECK_THROWS(snowman(11115111));
-//     // CHECK_THROWS(snowman(11151111));
-//     // CHECK_THROWS(snowman(11511115));
-//     // CHECK_THROWS(snowman(15111115));
-//     // CHECK_THROWS(snowman(51111115));
-
-
-//     // CHECK_THROWS(snowman(1));
-//     // CHECK_THROWS(snowman(11));
-//     // CHECK_THROWS(snowman(111));
-//     // CHECK_THROWS(snowman(1111));
-//     // CHECK_THROWS(snowman(11111));
-//     // CHECK_THROWS(snowman(111111));
-//     // CHECK_THROWS(snowman(1511111));    
-
-
-
-//     // // CHECK_THROWS(snowman(1111111-5));
-//     // // CHECK_THROWS(snowman(111111-15));
-//     // // CHECK_THROWS(snowman(11111-115));
-//     // // CHECK_THROWS(snowman(1111-1115));
-//     // // CHECK_THROWS(snowman(111-11115));
-//     // // CHECK_THROWS(snowman(11-111115));
-//     // // CHECK_THROWS(snowman(1-1111115));
-//     // CHECK_THROWS(snowman(-11111115));
-//     // CHECK_THROWS(snowman(00000000));
-    
-//     CHECK_THROWS(snowman(444444444));
-//     CHECK_THROWS(snowman(51111111));
-//     CHECK_THROWS(snowman(15111111));
-//     CHECK_THROWS(snowman(11511111));
-//     CHECK_THROWS(snowman(11151111));
-//     CHECK_THROWS(snowman(11115111));
-//     CHECK_THROWS(snowman(11111511));
-//     CHECK_THROWS(snowman(11111151));
-//     CHECK_THROWS(snowman(11111115));
-//     CHECK_THROWS(snowman(01111111));
-//     CHECK_THROWS(snowman(10111111));
-//     CHECK_THROWS(snowman(11011111));
-//     CHECK_THROWS(snowman(11101111));
-//     CHECK_THROWS(snowman(11110111));
-//     CHECK_THROWS(snowman(11111011));
-//     CHECK_THROWS(snowman(11111101));
-//     CHECK_THROWS(snowman(11111110));
-//     CHECK_THROWS(snowman(1));
-//     CHECK_THROWS(snowman(111111111));
-//     CHECK_THROWS(snowman(12));
-//     CHECK_THROWS(snowman(1111));
-//     CHECK_THROWS(snowman(11271));
-//     CHECK_THROWS(snowman(121411));
-//     CHECK_THROWS(snowman(1412123));
-// }
