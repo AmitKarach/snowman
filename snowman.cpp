@@ -13,60 +13,15 @@
 using namespace std;
 namespace clothing
 {
-    const array<string,4> hats = {
-    "      \n _===_",
-    "  ___ \n .....",
-    "   _  \n  /_\\ ",
-    "  ___ \n (_*_)",
-};
-    const array<string,4> noses = {
-    ",",
-    ".",
-    "_",
-    " ",
-};
-    const array<string,4> eyes = {
-    ".",
-    "o",
-    "O",
-    "-",
-};
-    const array<string,4> leftArmsUp  = {
-    " ",
-    "\\",
-    " ",
-    " ",
-};
-    const array<string,4> leftArmsDown  = {
-    "<",
-    " ",
-    "/",
-    " ",
-};
-    const array<string,4> rightArmsUp  = {
-    " ",
-    "/",
-    " ",
-    " ",
-};
-    const array<string,4> rightArmsDown  = {
-    ">",
-    " ",
-    "\\",
-    " ",
-};
-    const array<string,4> belly={
-    "( : )",
-    "(] [)",
-    "(> <)",
-    "(   )",
-};
-    const array<string,4> base={
-    " ( : ) ",
-    " (\" \") ",
-    " (___) ",
-    " (   ) ",
-};
+    const array<string,4> hats = {"      \n _===_","  ___ \n .....","   _  \n  /_\\ ","  ___ \n (_*_)",};
+    const array<string,4> noses = {",",".","_"," ",};
+    const array<string,4> eyes = {".","o","O","-",};
+    const array<string,4> leftArmsUp  = {" ","\\"," "," ",};
+    const array<string,4> leftArmsDown  = {"<"," ","/"," ",};
+    const array<string,4> rightArmsUp  = {" ","/"," "," ",};
+    const array<string,4> rightArmsDown  = {">"," ","\\"," ",};
+    const array<string,4> belly={"( : )","(] [)","(> <)","(   )",};
+    const array<string,4> base={" ( : ) "," (\" \") "," (___) "," (   ) ",};
 }
 
 namespace ariel

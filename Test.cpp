@@ -74,10 +74,6 @@ TEST_CASE("Good snowman code") {
     CHECK(nospaces(snowman(31111111)) == nospaces("  _  \n  /_\\ \n (.,.) \n<( : )>\n ( : ) "));
     CHECK(nospaces(snowman(41111111)) == nospaces(" ___ \n (_*_)\n (.,.) \n<( : )>\n ( : ) "));
 
-    // CHECK(nospaces(snowman(11111111)) == nospaces("===\n(.,.)\n<( : )>\n ( : )"));
-    // CHECK(nospaces(snowman(12312312)) == nospaces("      \n ===\\\n(O..)\n ( : )\\\n(\" \")"));
-    // CHECK(nospaces(snowman(22222222)) == nospaces(" ___\n .....\n\\(o.o)/\n (] [) \n (  \"  \")"));
-
 
 }
 
@@ -102,13 +98,10 @@ TEST_CASE("not enough numbers") {
     CHECK_THROWS(snowman(1511111));    
 }
 
+TEST_CASE("to many numbers") {
+    CHECK_THROWS(snowman(111111111));   
+}
+
 TEST_CASE("a negative number entery") {
-    CHECK_THROWS(snowman(-11111115));
-    CHECK_THROWS(snowman(-21145115));
-    CHECK_THROWS(snowman(-11321115));
-    CHECK_THROWS(snowman(-53311115));
-    CHECK_THROWS(snowman(-54231115));
-    CHECK_THROWS(snowman(-11143245));
-    CHECK_THROWS(snowman(-43254115));
-    
+    CHECK_THROWS(snowman(-11111115));   
 }
