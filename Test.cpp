@@ -83,9 +83,9 @@ TEST_CASE("not a legal entary") {
     CHECK_THROWS(snowman(11111511));
     CHECK_THROWS(snowman(11115111));
     CHECK_THROWS(snowman(11151111));
-    CHECK_THROWS(snowman(11511115));
-    CHECK_THROWS(snowman(15111115));
-    CHECK_THROWS(snowman(51111115));
+    CHECK_THROWS(snowman(11511111));
+    CHECK_THROWS(snowman(15111111);
+    CHECK_THROWS(snowman(51111111));
 }
 
 TEST_CASE("not enough numbers") {
